@@ -73,7 +73,7 @@ bool coind_can_mine(YAAMP_COIND *coind, bool isaux)
 	if(!coind->height) return false;
 	if(!coind->difficulty) return false;
 	if(coind->isaux != isaux) return false;
-//	if(isaux && !coind->aux.chainid) return false;
+	if(isaux && !coind->aux.chainid) return false;
 
 	return true;
 }
